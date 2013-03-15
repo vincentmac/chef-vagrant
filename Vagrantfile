@@ -99,7 +99,9 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provision :chef_client do |chef|
     chef.chef_server_url = "https://api.opscode.com/organizations/simplicity-io"
-    chef.validation_key_path = "simplicity-io-validator.pem"
+    chef.validation_key_path = ".chef/simplicity-io-validator.pem"
+    chef.validation_client_name = "simplicity-io-validator"
+    chef.node_name = "simplicity_vagrant"
   end
   #
   # If you're using the Opscode platform, your validator client is
@@ -108,5 +110,5 @@ Vagrant.configure("2") do |config|
   # If you have your own Chef Server, the default validation client name is
   # chef-validator, unless you changed the configuration.
   #
-  #   chef.validation_client_name = "ORGNAME-validator"
+    # chef.validation_client_name = "simplicity-io-validator"
 end

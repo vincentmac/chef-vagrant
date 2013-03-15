@@ -6,22 +6,22 @@
 ###
 
 # The company name - used for SSL certificates, and in srvious other places
-COMPANY_NAME = "Example Com"
+COMPANY_NAME = "Simplicity.io"
 
 # The Country Name to use for SSL Certificates
 SSL_COUNTRY_NAME = "US"
 
 # The State Name to use for SSL Certificates
-SSL_STATE_NAME = "Several"
+SSL_STATE_NAME = "California"
 
 # The Locality Name for SSL - typically, the city
-SSL_LOCALITY_NAME = "Locality"
+SSL_LOCALITY_NAME = "Calabasas"
 
 # What department?
 SSL_ORGANIZATIONAL_UNIT_NAME = "Operations"
 
 # The SSL contact email address
-SSL_EMAIL_ADDRESS = "ops@example.com"
+SSL_EMAIL_ADDRESS = "ops@simplicity.io"
 
 # License for new Cookbooks
 # Can be :apachev2 or :none
