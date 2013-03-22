@@ -1,0 +1,25 @@
+{
+  "name": "simplicity_vagrant",
+  "chef_environment": "_default",
+  "normal": {
+    "instance_role": "vagrant",
+    "tags": [
+
+    ],
+    "nodejs": {
+      "install_method": "source",
+      "version": "0.10.1"
+      // "npm": "1.2.14"
+    }
+  },
+  "run_list": [
+    "recipe[apt::default]"
+  , "recipe[build-essential::default]"
+  , "recipe[git::default]"
+  , "recipe[nginx::default]"
+  , "recipe[redisio::install]"
+  , "recipe[redisio::enable]"
+  , "recipe[nodejs::default]"
+  , "recipe[node-upstart::default]"
+  ]
+}
