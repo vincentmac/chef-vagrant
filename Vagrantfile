@@ -18,7 +18,12 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
+  # Web
   config.vm.network :forwarded_port, guest: 80, host: 8888
+  # Riak
+  config.vm.network :forwarded_port, guest: 8098, host: 8098
+  # Redis
+  config.vm.network :forwarded_port, guest: 6379, host: 6379
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.

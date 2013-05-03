@@ -20,4 +20,30 @@
 
 default['node-upstart']['n']['version'] = "0.9.3"
 default['node-upstart']['node_dir'] = "/etc/node"
+default['node-upstart']['node_bin'] = "/usr/local/bin/n"
+default['node-upstart']['node_log_dir'] = "/var/log/node"
+default['node-upstart']['use_upstart'] = true
+default['node-upstart']['repos_dir'] = "/home/ubuntu/repos"
+default['node-upstart']['repo_user'] = "ubuntu"
 
+# Simplicity.io Nginx Config
+default['node-upstart']['simplicity']['site'] = "simplicity.io"
+default['node-upstart']['simplicity']['port'] = 3000
+default['node-upstart']['simplicity']['aws_signin'] = "simplicity-aws"
+default['node-upstart']['simplicity']['enabled'] = true
+
+# Simplicity.io Git Repo Settings
+default['node-upstart']['simplicity']['remote_repo'] = "/home/ubuntu/repos/simplicity.io"
+default['node-upstart']['simplicity']['remote_hooks'] = "/home/ubuntu/repos/simplicity.io/hooks"
+default['node-upstart']['simplicity']['private_repo'] = "git@bitbucket.org:vincentmac/simplicity.io.git"
+
+
+# Simplicity.io Application Settings
+default['node-upstart']['simplicity']['app_dir'] = "/var/www/simplicity.io"
+default['node-upstart']['simplicity']['app_bin'] = "/var/www/simplicity.io/current/app.js"
+default['node-upstart']['simplicity']['log_dir'] = "/var/log/node/simplicity.io"
+default['node-upstart']['simplicity']['log_path'] = "/var/log/node/simplicity.io/simplicity.io.log"
+default['node-upstart']['simplicity']['node_version'] = "0.10.3"
+default['node-upstart']['simplicity']['node_env'] = "production"
+default['node-upstart']['simplicity']['filename'] = "simplicity"
+default['node-upstart']['simplicity']['service_name'] = "simplicity"
